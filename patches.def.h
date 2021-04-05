@@ -14,12 +14,12 @@
  * when including this patch.
  * https://st.suckless.org/patches/alpha/
  */
-#define ALPHA_PATCH 0
+#define ALPHA_PATCH 1
 
 /* Adds gradient transparency to st, depends on the alpha patch.
  * https://st.suckless.org/patches/gradient/
  */
-#define ALPHA_GRADIENT_PATCH 0
+#define ALPHA_GRADIENT_PATCH 1
 
 /* This patch allows st to reize to any pixel size rather than snapping to character width/height.
  * https://st.suckless.org/patches/anysize/
@@ -125,7 +125,7 @@
  * the terminal window.
  * https://st.suckless.org/patches/hidecursor/
  */
-#define HIDECURSOR_PATCH 0
+#define HIDECURSOR_PATCH 1
 
 /* This patch adds a keybinding that lets you invert the current colorscheme of st.
  * This provides a simple way to temporarily switch to a light colorscheme if you use a dark
@@ -263,7 +263,7 @@
 /* Adds support for w3m images.
  * https://st.suckless.org/patches/w3m/
  */
-#define W3M_PATCH 0
+#define W3M_PATCH 1
 
 /* Adds proper glyphs rendering in st allowing wide glyphs to be drawn as-is as opposed to
  * smaller or cut glyphs being rendered.

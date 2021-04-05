@@ -1,11 +1,22 @@
+/* ___  __    ________  _______   ________  ________  _________   
+|\  \|\  \ |\   __  \|\  ___ \ |\   __  \|\   ____\|\___   ___\
+\ \  \/  /|\ \  \|\  \ \   __/|\ \  \|\  \ \  \___|\|___ \  \_| 
+ \ \   ___  \ \   _  _\ \  \_|/_\ \   __  \ \_____  \   \ \  \B
+  \ \  \\ \  \ \  \\  \\ \  \_|\ \ \  \ \  \|____|\  \   \ \  \E
+   \ \__\\ \__\ \__\\ _\\ \_______\ \__\ \__\____\_\  \   \ \__\T
+    \|__| \|__|\|__|\|__|\|_______|\|__|\|__|\_________\   \|__| A
+                                            \|_________|    */
 /* See LICENSE file for copyright and license details. */
+
+// Change your colors.
+#include "colors/ocean.h"
 
 /*
  * appearance
  *
  * font: see http://freedesktop.org/software/fontconfig/fontconfig-user.html
  */
-static char *font = "Liberation Mono:pixelsize=12:antialias=true:autohint=true";
+static char *font = "Jetbrains Mono:pixelsize=12:antialias=true:autohint=true"; 
 #if FONT2_PATCH
 /* Spare fonts */
 static char *font2[] = {
@@ -102,7 +113,7 @@ const int boxdraw_braille = 0;
 static int bellvolume = 0;
 
 /* default TERM value */
-char *termname = "st-256color";
+char *termname = "xterm-color";
 
 /*
  * spaces per tab
@@ -129,47 +140,6 @@ float grad_alpha = 0.54; //alpha value that'll change
 float stat_alpha = 0.46; //constant alpha value that'll get added to grad_alpha
 #endif // ALPHA_GRADIENT_PATCH
 #endif // ALPHA_PATCH
-
-/* Terminal colors (16 first used in escape sequence) */
-static const char *colorname[] = {
-	/* 8 normal colors */
-	"black",
-	"red3",
-	"green3",
-	"yellow3",
-	"blue2",
-	"magenta3",
-	"cyan3",
-	"gray90",
-
-	/* 8 bright colors */
-	"gray50",
-	"red",
-	"green",
-	"yellow",
-	"#5c5cff",
-	"magenta",
-	"cyan",
-	"white",
-
-	[255] = 0,
-
-	/* more colors can be added after 255 to use with DefaultXX */
-	"#add8e6", /* 256 -> cursor */
-	"#555555", /* 257 -> rev cursor*/
-	"#000000", /* 258 -> bg */
-	"#e5e5e5", /* 259 -> fg */
-};
-
-
-/*
- * Default colors (colorname index)
- * foreground, background, cursor, reverse cursor
- */
-unsigned int defaultfg = 259;
-unsigned int defaultbg = 258;
-unsigned int defaultcs = 256;
-unsigned int defaultrcs = 257;
 
 /*
  * Default shape of cursor
