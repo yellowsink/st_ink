@@ -50,7 +50,7 @@
  * This patch makes st set CLIPBOARD on selection.
  * https://st.suckless.org/patches/clipboard/
  */
-#define CLIPBOARD_PATCH 0
+#define CLIPBOARD_PATCH 1
 
 /* Select and copy the last URL displayed with Mod+l. Multiple invocations cycle through the
  * available URLs.
