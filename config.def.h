@@ -9,7 +9,7 @@
 /* See LICENSE file for copyright and license details. */
 
 // Change your colors.
-#include "colors/ocean.h"
+#include "colors/genfetch.h"
 
 /*
  * appearance
