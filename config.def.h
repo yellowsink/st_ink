@@ -1,10 +1,10 @@
 /* ___  __    ________  _______   ________  ________  _________   
 |\  \|\  \ |\   __  \|\  ___ \ |\   __  \|\   ____\|\___   ___\
 \ \  \/  /|\ \  \|\  \ \   __/|\ \  \|\  \ \  \___|\|___ \  \_| 
- \ \   ___  \ \   _  _\ \  \_|/_\ \   __  \ \_____  \   \ \  \B
-  \ \  \\ \  \ \  \\  \\ \  \_|\ \ \  \ \  \|____|\  \   \ \  \E
-   \ \__\\ \__\ \__\\ _\\ \_______\ \__\ \__\____\_\  \   \ \__\T
-    \|__| \|__|\|__|\|__|\|_______|\|__|\|__|\_________\   \|__| A
+ \ \   ___  \ \   _  _\ \  \_|/_\ \   __  \ \_____  \   \ \  \
+  \ \  \\ \  \ \  \\  \\ \  \_|\ \ \  \ \  \|____|\  \   \ \  \
+   \ \__\\ \__\ \__\\ _\\ \_______\ \__\ \__\____\_\  \   \ \__\
+    \|__| \|__|\|__|\|__|\|_______|\|__|\|__|\_________\   \|__|
                                             \|_________|    */
 /* See LICENSE file for copyright and license details. */
 
@@ -237,15 +237,15 @@ static MouseShortcut mshortcuts[] = {
 	{ XK_ANY_MOD,           Button2, selpaste,       {.i = 0},      1 },
 	#endif // CLIPBOARD_PATCH
 	#if SCROLLBACK_MOUSE_PATCH
-	{ ShiftMask,            Button4, kscrollup,      {.i = 1} },
-	{ ShiftMask,            Button5, kscrolldown,    {.i = 1} },
+	{ ShiftMask,            Button4, kscrollup,      {.i = 3} },
+	{ ShiftMask,            Button5, kscrolldown,    {.i = 3} },
 	#else
 	{ ShiftMask,            Button4, ttysend,        {.s = "\033[5;2~"} },
 	{ ShiftMask,            Button5, ttysend,        {.s = "\033[6;2~"} },
 	#endif // SCROLLBACK_MOUSE_PATCH
 	#if SCROLLBACK_MOUSE_ALTSCREEN_PATCH
-	{ XK_NO_MOD,            Button4, kscrollup,      {.i = 1} },
-	{ XK_NO_MOD,            Button5, kscrolldown,    {.i = 1} },
+	{ XK_NO_MOD,            Button4, kscrollup,      {.i = 3} },
+	{ XK_NO_MOD,            Button5, kscrolldown,    {.i = 3} },
 	#else
 	{ XK_ANY_MOD,           Button4, ttysend,        {.s = "\031"} },
 	{ XK_ANY_MOD,           Button5, ttysend,        {.s = "\005"} },
@@ -281,14 +281,14 @@ static Shortcut shortcuts[] = {
 	{ ControlMask,          XK_Print,       toggleprinter,   {.i =  0} },
 	{ ShiftMask,            XK_Print,       printscreen,     {.i =  0} },
 	{ XK_ANY_MOD,           XK_Print,       printsel,        {.i =  0} },
-	{ TERMMOD,              XK_Prior,       zoom,            {.f = +1} },
-	{ TERMMOD,              XK_Next,        zoom,            {.f = -1} },
+	{ ControlMask,              XK_KP_Add,       zoom,            {.f = +2} },
+	{ ControlMask,              XK_KP_Subtract,        zoom,            {.f = -2} },
 	{ TERMMOD,              XK_Home,        zoomreset,       {.f =  0} },
 	{ TERMMOD,              XK_C,           clipcopy,        {.i =  0} },
 	{ TERMMOD,              XK_V,           clippaste,       {.i =  0} },
 	#if SCROLLBACK_PATCH
-	{ ShiftMask,            XK_Page_Up,     kscrollup,       {.i = -1} },
-	{ ShiftMask,            XK_Page_Down,   kscrolldown,     {.i = -1} },
+	{ ShiftMask,            XK_Page_Up,     kscrollup,       {.i = -3} },
+	{ ShiftMask,            XK_Page_Down,   kscrolldown,     {.i = -3} },
 	#endif // SCROLLBACK_PATCH
 	#if CLIPBOARD_PATCH
 	{ TERMMOD,              XK_Y,           clippaste,       {.i =  0} },
