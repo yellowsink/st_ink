@@ -9,6 +9,13 @@
 
 /* Patches */
 
+
+/* This patch is used for clipboard. 
+ * Keys are CTRL + SHIFT + V for pasting, CTRL + SHIFT + C for copying.
+ */
+#define KREAST_CLIPBOARD 1
+
+
 /* The alpha patch adds transparency for the terminal.
  * You need to uncomment the corresponding line in config.mk to use the -lXrender library
  * when including this patch.
@@ -50,7 +57,7 @@
  * This patch makes st set CLIPBOARD on selection.
  * https://st.suckless.org/patches/clipboard/
  */
-#define CLIPBOARD_PATCH 1
+#define CLIPBOARD_PATCH 0
 
 /* Select and copy the last URL displayed with Mod+l. Multiple invocations cycle through the
  * available URLs.

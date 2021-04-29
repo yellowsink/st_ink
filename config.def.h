@@ -281,8 +281,12 @@ static Shortcut shortcuts[] = {
 	{ ControlMask,          XK_Print,       toggleprinter,   {.i =  0} },
 	{ ShiftMask,            XK_Print,       printscreen,     {.i =  0} },
 	{ XK_ANY_MOD,           XK_Print,       printsel,        {.i =  0} },
-	{ ControlMask,              XK_KP_Add,       zoom,            {.f = +2} },
-	{ ControlMask,              XK_KP_Subtract,        zoom,            {.f = -2} },
+    #if KREAST_CLIPBOARD
+    { TERMMOD,              XK_C,           clipcopy,        {.i =  0} },
+    { TERMMOD,              XK_V,           clippaste,       {.i =  0} },
+    #endif // KREAST_CLIPBOARD
+	{ ControlMask,          XK_KP_Add,       zoom,           {.f = +2} },
+	{ ControlMask,           XK_KP_Subtract,  zoom,           {.f = -2} },
 	{ TERMMOD,              XK_Home,        zoomreset,       {.f =  0} },
 	{ TERMMOD,              XK_C,           clipcopy,        {.i =  0} },
 	{ TERMMOD,              XK_V,           clippaste,       {.i =  0} },
