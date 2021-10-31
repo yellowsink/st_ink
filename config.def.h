@@ -9,14 +9,14 @@
 /* See LICENSE file for copyright and license details. */
 
 // Change your colors.
-#include "colors/nord.h"
+#include "colors/genfetch.h"
 
 /*
  * appearance
  *
  * font: see http://freedesktop.org/software/fontconfig/fontconfig-user.html
  */
-static char *font = "Jetbrains Mono:pixelsize=12:antialias=true:autohint=true"; 
+static char *font = "Cozette:pixelsize=13:antialias=true:autohint=true"; 
 #if FONT2_PATCH
 /* Spare fonts */
 static char *font2[] = {
@@ -41,7 +41,7 @@ static int borderpx = 2;
  * 4: value of shell in /etc/passwd
  * 5: value of shell in config.h
  */
-static char *shell = "/bin/sh";
+static char *shell = "/bin/zsh";
 char *utmp = NULL;
 /* scroll program: to enable use a string like "scroll" */
 char *scroll = NULL;
@@ -113,7 +113,7 @@ const int boxdraw_braille = 0;
 static int bellvolume = 0;
 
 /* default TERM value */
-char *termname = "xterm-color";
+char *termname = "xterm-256color";
 
 /*
  * spaces per tab
@@ -130,7 +130,7 @@ char *termname = "xterm-color";
  *
  *	stty tabs
  */
-unsigned int tabspaces = 8;
+unsigned int tabspaces = 4;
 
 #if ALPHA_PATCH
 /* bg opacity */
@@ -148,7 +148,7 @@ float stat_alpha = 0.46; //constant alpha value that'll get added to grad_alpha
  * 6: Bar ("|")
  * 7: Snowman ("☃")
  */
-static unsigned int cursorshape = 2;
+static unsigned int cursorshape = 4;
 
 /*
  * Default columns and rows numbers
