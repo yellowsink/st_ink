@@ -9,7 +9,7 @@
 /* See LICENSE file for copyright and license details. */
 
 // Change your colors.
-#include "colors/genfetch.h"
+#include "colors/catppuccin.h"
 
 /*
  * appearance
